@@ -1,7 +1,11 @@
-int add();
+int adding();
+int factorial();
+int biggest();
 int main()
   {
-    add();
+    adding();
+   factorial();
+   biggest();
     return 0;
    }
  
