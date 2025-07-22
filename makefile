@@ -1,9 +1,9 @@
-problem.exe: big2.o fact.o main.o
-	gcc -o problem.exe big2.o fact.o main.o
+problem.exe: main.o big2.o fact2.o 
+	gcc -o problem.exe  main.o big2.o fact2.o 
 big2.o:big2.c
 	gcc -c big2.c
-fact.o:fact.c
-	gcc -c fact.c
+fact2.o:fact2.c
+	gcc -c fact2.c
 main.o:main.c
 	gcc -c main.c
 
