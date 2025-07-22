@@ -7,5 +7,5 @@ big2.o:big2.c
 fact2.o:fact2.c
 	gcc -c fact2.c
 add.o:add.c
-	gcc -c ad.c
+	gcc -c add.c
 
