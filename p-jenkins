@@ -4,6 +4,10 @@ parameters {
   string defaultValue: 'test', name: 'build', trim: true
   string defaultValue: 'testing', name: 'branch', trim: true
 }
+environment {
+  branch = "testing"
+  build = "test"
+}
 
 stages {
 stage ('build') { steps { echo "build1111 $build" } }
