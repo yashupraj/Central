@@ -1,33 +1,19 @@
 pipeline {
       agent any
-parallel {
 stages {
-stage('test') { 
-parallel { 
-stage ('test1')  { steps { echo "this is build" } }
-stage ('test2')  { steps { echo "this is test2" } }
+stage ('build') { steps { echo "build1" } }
+stage ('test') { steps { echo "build1" } }
+stage ('browsr test') { 
+            parallel { stage ('chrome') { steps { echo "build1" } }
+                       stage ('firefox') { steps { echo "build1" } } 
+                       stage ('safari') { steps { echo "build1" } } 
+                       stage ('opera') { steps { echo "build1" } }
+
 }
-}
-stage('build') { 
-parallel {
-stage ('build1') { steps { echo "this is build" } }
-stage ('build2') { steps { echo "this is build" } }
-}
- }
-}
-stages {
-stage('test') { 
-parallel { 
-stage ('test1')  { steps { echo "this is build" } }
-stage ('test2')  { steps { echo "this is test2" } }
-}
-}
-stage('build') { 
-parallel {
-stage ('build1') { steps { echo "this is build" } }
-stage ('build2') { steps { echo "this is build" } }
-}
- }
-}
+   }
+
+stage ('testing other') { steps { echo "build1" } }
+stage ('analysis') { steps { echo "build1" } }
+stage ('deploy') { steps { echo "build1" } }
 }
 }
