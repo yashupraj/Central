@@ -10,4 +10,4 @@ stage ('test2')  { steps { echo "this is test2" } }
 stage('build') { steps { echo "this is build" } }
 }
  }
-
+}
