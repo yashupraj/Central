@@ -2,8 +2,7 @@ pipeline {
       agent any
 parameters {
   string defaultValue: 'test', name: 'build', trim: true
-  text defaultValue: '''main
-master''', name: 'branch'
+  string defaultValue: 'testing', name: 'branch', trim: true
 }
 
 stages {
