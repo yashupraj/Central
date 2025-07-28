@@ -7,10 +7,10 @@ master''', name: 'branch'
 }
 
 stages {
-stage ('build') { steps { echo "build1 $build" } }
+stage ('build') { steps { echo "build1111 $build" } }
 stage ('test') { steps { echo "build1 $branch" } }
 stage ('browsr test') { 
-            parallel { stage ('chrome') { steps { echo "build1" } }
+            parallel { stage ('chrome') { steps { echo "build111" } }
                        stage ('firefox') { steps { echo "build1" } } 
                        stage ('safari') { steps { echo "build1" } } 
                        stage ('opera') { steps { echo "build1" } }
