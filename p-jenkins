@@ -10,8 +10,8 @@ environment {
 }
 
 stages {
-stage ('build') { steps { echo "build1111 $build" } }
-stage ('test') { steps { echo "build1 $branch" } }
+stage ('build') { steps { echo "build1111 ${params.build}" } }
+stage ('test') { steps { echo "build1 ${params.branch}" } }
 stage ('browsr test') { 
             parallel { stage ('chrome') { steps { echo "build111" } }
                        stage ('firefox') { steps { echo "build1" } } 
