@@ -14,6 +14,10 @@ stage ('browsr test') {
 
 stage ('testing other') { steps { echo "build1" } }
 stage ('analysis') { steps { echo "build1" } }
-stage ('deploy') { steps { echo "build1" } }
+stage ('deploy') { 
+ parallel { stage ('deploy1') { steps { echo "build1" } }
+                       stage ('deploy2') { steps { echo "build1" } }
+}
+}
 }
 }
